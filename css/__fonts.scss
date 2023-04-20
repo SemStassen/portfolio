@@ -1,0 +1,13 @@
+// Bitter font is in site head!!!
+
+// Remember to eventually add the font files to the project
+
+@font-face {
+    font-family: 'NATS';
+    src:url('../fonts/NATS/NATS.ttf.woff') format('woff'),
+        url('../fonts/NATS/NATS.ttf.svg#NATS') format('svg'),
+        url('../fonts/NATS/NATS.ttf.eot'),
+        url('../fonts/NATS/NATS.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
