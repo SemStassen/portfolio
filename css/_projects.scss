@@ -1,0 +1,26 @@
+$primaryFont: "Inter", sans-serif;
+$secondaryFont: "Bitter", serif;
+
+body.project-page {
+    .site-wrapper {
+       main {
+        padding-top: 100px;
+        .working-wrapper {
+            height: calc(90vh - 100px);
+            display: flex;
+            align-items: center;
+            .text-wrapper {
+                width: 70%;
+            h1 {
+                font-family: $primaryFont;
+                font-size: 3rem;
+            }
+            p {
+                font-family: $secondaryFont;
+                font-size: 1.5rem;
+            }
+        }
+        }
+       } 
+    }
+}

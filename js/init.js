@@ -16,56 +16,62 @@ window.onpointermove = (event) => {
 };
 
 function animateCircle(event, scrollTop) {
-  const { clientX, clientY } = event;
+  if (followingCircle) {
+    const { clientX, clientY } = event;
 
-  followingCircle.animate(
-    {
-      left: `${clientX - 140}px`,
-      top: `${clientY - 140 + scrollTop}px`,
-    },
-    { duration: 3000, fill: "forwards" }
-  );
+    followingCircle.animate(
+      {
+        left: `${clientX - 140}px`,
+        top: `${clientY - 140 + scrollTop}px`,
+      },
+      { duration: 3000, fill: "forwards" }
+    );
+  }
 }
 
 function removeMoreArrow(scrollTop) {
-  if (scrollTop >= 10) {
-    body.classList.add("scrolled");
-    moreArrow.animate(
-      {
-        opacity: 0,
-      },
-      {
-        duration: 500,
-        fill: "forwards",
-      }
-    );
-  } else if (scrollTop < 10) {
-    body.classList.remove("scrolled");
-    moreArrow.animate(
-      {
-        opacity: 1,
-      },
-      {
-        duration: 500,
-        fill: "forwards",
-      }
-    );
+  if (moreArrow) {
+    if (scrollTop >= 10) {
+      body.classList.add("scrolled");
+      moreArrow.animate(
+        {
+          opacity: 0,
+        },
+        {
+          duration: 500,
+          fill: "forwards",
+        }
+      );
+    } else if (scrollTop < 10) {
+      body.classList.remove("scrolled");
+      moreArrow.animate(
+        {
+          opacity: 1,
+        },
+        {
+          duration: 500,
+          fill: "forwards",
+        }
+      );
+    }
   }
 }
 
 // constantly animates the more about me arrow to bop up and down
-moreArrow.animate(
-  [
-    // keyframes
-    { bottom: "25px" },
-    { bottom: "35px" },
-    { bottom: "25px" },
-  ],
-  {
-    duration: 2500,
-    iterations: Infinity,
-  }
-);
+if (moreArrow) {
+  moreArrow.animate(
+    [
+      // keyframes
+      { bottom: "25px" },
+      { bottom: "35px" },
+      { bottom: "25px" },
+    ],
+    {
+      duration: 2500,
+      iterations: Infinity,
+    }
+  );
+}
 
 // white bar scroll animation
 const tickerWrapper = $(".ticker-wrapper");

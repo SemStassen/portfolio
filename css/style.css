@@ -79,6 +79,7 @@ ul {
 }
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 125px;
 }
 
 body {
@@ -125,8 +126,10 @@ body .site-wrapper main .container {
   max-width: 1140px;
   margin: 0 auto;
 }
-body .site-wrapper main .introduction {
+body .site-wrapper main .container-intro {
   margin-top: max(48vh - 210px, 90px);
+}
+body .site-wrapper main .introduction {
   margin-bottom: 52vh;
   mix-blend-mode: overlay;
 }
@@ -275,8 +278,11 @@ body .site-wrapper main .hype-scroll .scrollbar-wrapper li span {
   white-space: nowrap;
   transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
 }
+body .site-wrapper main .container-projects {
+  padding-top: 5rem;
+}
 body .site-wrapper main .project-showcase {
-  padding-block: 5rem;
+  padding-bottom: 5rem;
 }
 body .site-wrapper main .project-showcase .my-projects {
   width: 80vmin;
@@ -339,7 +345,6 @@ body .site-wrapper main .project-showcase .my-projects .main-scene .project.proj
   left: 0;
   width: 75%;
   height: 50%;
-  background-color: red;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 33.33% 100%, 33.33% 50%, 0 50%);
 }
 body .site-wrapper main .project-showcase .my-projects .main-scene .project.project-1 img {
@@ -350,7 +355,6 @@ body .site-wrapper main .project-showcase .my-projects .main-scene .project.proj
   left: 0;
   width: 75%;
   height: 75%;
-  background-color: yellow;
   clip-path: polygon(0 0, 33.33% 0, 33.33% 33.33%, 66.66% 33.33%, 66.66% 66.66%, 100% 66.66%, 100% 100%, 0 100%);
 }
 body .site-wrapper main .project-showcase .my-projects .main-scene .project.project-2 .meta-project {
@@ -362,7 +366,6 @@ body .site-wrapper main .project-showcase .my-projects .main-scene .project.proj
   left: 50%;
   width: 50%;
   height: 100%;
-  background-color: green;
   clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 50% 75%, 0 75%, 0 50%, 50% 50%);
 }
 body .site-wrapper main .project-showcase .my-projects .project-1-focus {
@@ -373,14 +376,12 @@ body .site-wrapper main .project-showcase .my-projects .project-1-focus .project
   left: 0;
   width: 100%;
   height: 75%;
-  background-color: red;
 }
 body .site-wrapper main .project-showcase .my-projects .project-1-focus .project.project-2 {
   top: 75%;
   left: 0;
   width: 50%;
   height: 25%;
-  background-color: yellow;
 }
 body .site-wrapper main .project-showcase .my-projects .project-1-focus .project.project-2 .meta-project {
   left: 5px;
@@ -391,7 +392,6 @@ body .site-wrapper main .project-showcase .my-projects .project-1-focus .project
   left: 50%;
   width: 50%;
   height: 25%;
-  background-color: green;
 }
 body .site-wrapper main .project-showcase .my-projects .project-2-focus {
   clip-path: polygon(0 0);
@@ -401,7 +401,6 @@ body .site-wrapper main .project-showcase .my-projects .project-2-focus .project
   left: 0;
   width: 50%;
   height: 25%;
-  background-color: red;
 }
 body .site-wrapper main .project-showcase .my-projects .project-2-focus .project.project-1 img {
   object-position: center right;
@@ -415,7 +414,6 @@ body .site-wrapper main .project-showcase .my-projects .project-2-focus .project
   left: 0;
   width: 100%;
   height: 75%;
-  background-color: yellow;
 }
 body .site-wrapper main .project-showcase .my-projects .project-2-focus .project.project-2 img {
   object-position: right center;
@@ -425,7 +423,6 @@ body .site-wrapper main .project-showcase .my-projects .project-2-focus .project
   left: 50%;
   width: 50%;
   height: 25%;
-  background-color: green;
 }
 body .site-wrapper main .project-showcase .my-projects .project-3-focus {
   clip-path: polygon(0 0);
@@ -435,7 +432,6 @@ body .site-wrapper main .project-showcase .my-projects .project-3-focus .project
   left: 0;
   width: 50%;
   height: 25%;
-  background-color: red;
 }
 body .site-wrapper main .project-showcase .my-projects .project-3-focus .project.project-1 img {
   object-position: center right;
@@ -449,7 +445,6 @@ body .site-wrapper main .project-showcase .my-projects .project-3-focus .project
   left: 0;
   width: 50%;
   height: 25%;
-  background-color: yellow;
 }
 body .site-wrapper main .project-showcase .my-projects .project-3-focus .project.project-2 .meta-project {
   left: 5px;
@@ -460,7 +455,6 @@ body .site-wrapper main .project-showcase .my-projects .project-3-focus .project
   left: 0%;
   width: 100%;
   height: 100%;
-  background-color: green;
   clip-path: polygon(0 25%, 50% 25%, 50% 0, 100% 0, 100% 100%, 50% 100%, 50% 75%, 0 75%);
 }
 body .site-wrapper main .project-showcase .my-projects .project-3-focus .project.project-3 img {
@@ -515,6 +509,26 @@ body .site-wrapper main .about-me .about-wrapper p:not(:last-child) {
   top: 0px;
   left: 50px;
   opacity: 0.6;
+}
+
+body.project-page .site-wrapper main {
+  padding-top: 100px;
+}
+body.project-page .site-wrapper main .working-wrapper {
+  height: calc(90vh - 100px);
+  display: flex;
+  align-items: center;
+}
+body.project-page .site-wrapper main .working-wrapper .text-wrapper {
+  width: 70%;
+}
+body.project-page .site-wrapper main .working-wrapper .text-wrapper h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 3rem;
+}
+body.project-page .site-wrapper main .working-wrapper .text-wrapper p {
+  font-family: "Bitter", serif;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
