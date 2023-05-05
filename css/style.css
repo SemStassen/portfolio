@@ -77,6 +77,14 @@ ul {
   font-weight: normal;
   font-style: normal;
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", sans-serif;
+}
+
+p, span, small {
+  font-family: "Inter", sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 125px;
@@ -203,48 +211,8 @@ body .site-wrapper main .introduction .more .arrow-down {
   height: 14px;
   margin: 0 auto;
 }
-body .site-wrapper main .contact-link {
-  mix-blend-mode: overlay;
-  padding-top: 2rem;
-  padding-bottom: 5rem;
-}
-body .site-wrapper main .contact-link .contact-wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-}
-body .site-wrapper main .contact-link .contact-wrapper .inspire p {
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: 1.5rem;
-}
-body .site-wrapper main .contact-link .contact-wrapper .contact-button {
-  align-self: center;
-}
-body .site-wrapper main .contact-link .contact-wrapper .contact-button a {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  border: 1px solid black;
-  background-color: transparent;
-  color: black;
-  transition: all 0.3s ease-in-out;
-  border-radius: 38px;
-  padding-inline: 2rem;
-  padding-block: 1rem;
-  font-family: "Bitter", serif;
-  font-size: 2rem;
-}
-body .site-wrapper main .contact-link .contact-wrapper .contact-button a small {
-  overflow: hidden;
-}
-body .site-wrapper main .contact-link .contact-wrapper .contact-button a .arrow {
-  display: inline-block;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='26' viewBox='0 0 44 26' fill='none'%3E%3Cpath d='M0 13H43M43 13L23 25M43 13L33 7L23 1' stroke='black'/%3E%3C/svg%3E");
-  width: 44px;
-  height: 26px;
-}
 body .site-wrapper main .hype-scroll {
+  box-shadow: 0px 0px 20px black;
   margin-top: 3rem;
   background-color: white;
   position: relative;
@@ -284,7 +252,15 @@ body .site-wrapper main .container-projects {
 body .site-wrapper main .project-showcase {
   padding-bottom: 5rem;
 }
+body .site-wrapper main .project-showcase h3 {
+  font-family: "Bitter", serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-block: 3rem 2rem;
+}
 body .site-wrapper main .project-showcase .my-projects {
+  z-index: 5;
   width: 80vmin;
   height: 80vmin;
   margin: 0 auto;
@@ -467,22 +443,96 @@ body .site-wrapper main .about-me .about-wrapper {
 }
 body .site-wrapper main .about-me .about-wrapper h2 {
   text-align: center;
-  font-family: "Bitter", serif;
   font-weight: bold;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
 body .site-wrapper main .about-me .about-wrapper p {
-  font-family: "Inter", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   line-height: 1.6rem;
 }
 body .site-wrapper main .about-me .about-wrapper p:not(:last-child) {
   margin-bottom: 1.5rem;
 }
+body .site-wrapper footer:not(.main-page) {
+  margin-top: 5rem;
+}
+body .site-wrapper footer .contact-link {
+  mix-blend-mode: overlay;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+body .site-wrapper footer .contact-link .contact-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+body .site-wrapper footer .contact-link .contact-wrapper .inspire p {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+body .site-wrapper footer .contact-link .contact-wrapper .contact-button {
+  align-self: center;
+}
+body .site-wrapper footer .contact-link .contact-wrapper .contact-button a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid black;
+  background-color: transparent;
+  color: black;
+  transition: all 0.3s ease-in-out;
+  border-radius: 38px;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  font-family: "Bitter", serif;
+  font-size: 2rem;
+}
+body .site-wrapper footer .contact-link .contact-wrapper .contact-button a small {
+  overflow: hidden;
+}
+body .site-wrapper footer .contact-link .contact-wrapper .contact-button a .arrow {
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='26' viewBox='0 0 44 26' fill='none'%3E%3Cpath d='M0 13H43M43 13L23 25M43 13L33 7L23 1' stroke='black'/%3E%3C/svg%3E");
+  width: 44px;
+  height: 26px;
+}
+body .site-wrapper footer .link-list {
+  background-color: white;
+  position: relative;
+  padding: 0.4rem;
+}
+body .site-wrapper footer .link-list .copyright {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+body .site-wrapper footer .link-list .links {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+body .site-wrapper footer .link-list .links a {
+  display: block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+body .site-wrapper footer .link-list .links a.linkedin {
+  padding: 6px 6px 6px 6px;
+  background-color: black;
+}
+body .site-wrapper footer .link-list .links a img {
+  object-fit: contain;
+}
 
 .mouse-follow {
   position: absolute;
+  z-index: -1;
   top: 300px;
   left: 80%;
   mix-blend-mode: overlay;
@@ -514,21 +564,69 @@ body .site-wrapper main .about-me .about-wrapper p:not(:last-child) {
 body.project-page .site-wrapper main {
   padding-top: 100px;
 }
-body.project-page .site-wrapper main .working-wrapper {
+body.project-page .site-wrapper main .project-container {
   height: calc(90vh - 100px);
+  margin-bottom: calc(10vh + 100px);
   display: flex;
   align-items: center;
 }
-body.project-page .site-wrapper main .working-wrapper .text-wrapper {
+body.project-page .site-wrapper main .project-container .text-wrapper {
   width: 70%;
 }
-body.project-page .site-wrapper main .working-wrapper .text-wrapper h1 {
+body.project-page .site-wrapper main .project-container .text-wrapper h1 {
   font-family: "Inter", sans-serif;
   font-size: 3rem;
 }
-body.project-page .site-wrapper main .working-wrapper .text-wrapper p {
+body.project-page .site-wrapper main .project-container .text-wrapper p {
   font-family: "Bitter", serif;
   font-size: 1.5rem;
+}
+body.project-page .site-wrapper main .project-container .text-wrapper .project-meta {
+  margin-top: 3rem;
+}
+body.project-page .site-wrapper main .project-container .text-wrapper .project-meta .meta-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+body.project-page .site-wrapper main .project-container .text-wrapper .project-meta .meta-wrapper h3 {
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+}
+body.project-page .site-wrapper main .project-container .text-wrapper .project-meta .meta-wrapper span {
+  font-size: 1.1rem;
+}
+body.project-page .site-wrapper main .project-container .more {
+  position: absolute;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 200px;
+  height: 20px;
+  bottom: 25px;
+  left: 50%;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  opacity: 1;
+}
+body.project-page .site-wrapper main .project-container .more .arrow-down {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='14' viewBox='0 0 24 14' fill='none'%3E%3Cpath d='M10.9393 13.0607C11.5251 13.6464 12.4749 13.6464 13.0607 13.0607L22.6066 3.51471C23.1924 2.92892 23.1924 1.97918 22.6066 1.39339C22.0208 0.807603 21.0711 0.807604 20.4853 1.39339L12 9.87868L3.51471 1.39341C2.92892 0.807619 1.97918 0.80762 1.39339 1.39341C0.807605 1.97919 0.807606 2.92894 1.39339 3.51473L10.9393 13.0607ZM10.5 10L10.5 12L13.5 12L13.5 10L10.5 10Z' fill='%231E1E1E'/%3E%3C/svg%3E");
+  width: 24px;
+  height: 14px;
+  margin: 0 auto;
+}
+body.project-page .site-wrapper main .project-about {
+  max-width: 748px;
+  margin: 0 auto;
+}
+body.project-page .site-wrapper main .project-about h4 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+body.project-page .site-wrapper main .project-about h4:first-child {
+  margin-top: 4rem;
+}
+body.project-page .site-wrapper main .project-about p {
+  padding-top: 1.5rem;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
