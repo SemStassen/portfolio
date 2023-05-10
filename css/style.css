@@ -612,6 +612,15 @@ body .site-wrapper footer .link-list .links a img {
   }
 }
 @media (max-width: 548px) {
+  body .site-wrapper header .header-desktop {
+    padding-inline: 1.5rem;
+  }
+  body .site-wrapper header .header-desktop .logo {
+    font-size: 1.5rem;
+  }
+  body .site-wrapper header .header-desktop .menu {
+    gap: 1rem;
+  }
   body .site-wrapper main .introduction .intro-wrapper .personal-image {
     width: 200px;
     height: 200px;
