@@ -534,6 +534,7 @@ body .site-wrapper footer .link-list .links a img {
 
 .mouse-follow {
   position: absolute;
+  will-change: absolute;
   z-index: -1;
   top: 300px;
   left: 80%;
